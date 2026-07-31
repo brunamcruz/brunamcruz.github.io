@@ -11,75 +11,85 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html">Bruna Marcela :)</a>
+      <a class="brand" href="index.html"><span class="brand-initial">B</span><span class="brand-rest"><span style="--i:0; --ri:14">r</span><span style="--i:1; --ri:13">u</span><span style="--i:2; --ri:12">n</span><span style="--i:3; --ri:11">a</span><span style="--i:4; --ri:10">&nbsp;</span><span style="--i:5; --ri:9">M</span><span style="--i:6; --ri:8">a</span><span style="--i:7; --ri:7">r</span><span style="--i:8; --ri:6">c</span><span style="--i:9; --ri:5">e</span><span style="--i:10; --ri:4">l</span><span style="--i:11; --ri:3">a</span><span style="--i:12; --ri:2">&nbsp;</span><span style="--i:13; --ri:1">:</span><span style="--i:14; --ri:0">)</span></span></a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
+        <a href="#work">Work</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
       </nav>
-      <div class="contact-nav" aria-label="Contact links">
-        <a href="mailto:brunacruz97@gmail.com?subject=Hello!">Email</a>
-        <a href="https://www.linkedin.com/in/brunamcruz/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="/Bruna-Marcela-CV.pdf">CV</a>
+      <div class="contact-nav" aria-label="CV link">
+        <a href="/Bruna-Marcela-CV.pdf" target="_blank" rel="noreferrer">↗ Resume</a>
       </div>
     </header>
 
     <main>
       <section class="home-hero">
         <div class="hero-intro">
-          <p class="eyebrow">Product Designer based in Portugal</p>
-          <h1>Designing clarity for complex product ecosystems.</h1>
+          <h1>Turning complexity into clarity.</h1>
         </div>
         <div class="hero-copy">
           <p>
-            I transform technical requirements into structured user flows,
-            prototypes, and scalable interface decisions. Currently designing
-            product experiences at Nokia.
+            Hi, I'm Bruna, a Product Designer.
           </p>
+          <p>
+            I design intuitive digital products that balance user needs,
+            business goals, and technical complexity.
+          </p>
+        </div>
+        <div class="hero-meta" aria-label="Location and site credit">
+          <span>Portugal</span>
+          <span>Designed and vibecoded by me</span>
         </div>
       </section>
 
-      <section class="home-grid" aria-label="Portfolio overview">
-        <article class="about-preview">
-          <p class="eyebrow">About</p>
-          <h2>Systems thinker, detail person, product designer.</h2>
-          <p>
-            My work is about making complex tasks easier to understand, align,
-            and complete through thoughtful UX, UI QA, and design systems.
-          </p>
-          <a class="text-link" href="about.html">Read more about me</a>
-        </article>
+      <div id="work" class="selected-work-title">
+        <p class="eyebrow">Selected work</p>
+      </div>
 
-        <section class="featured-projects" aria-label="Featured projects">
-          <div class="section-title">
-            <p class="eyebrow">Selected work</p>
-            <a class="text-link" href="projects.html">All projects</a>
+      <section class="featured-projects" aria-label="Featured projects">
+        <a class="project-preview" href="moody.html">
+          <span>01</span>
+          <div>
+            <h2>Moody</h2>
+            <p>A Spotify feature concept exploring music as a wellbeing companion.</p>
           </div>
+        </a>
 
-          <a class="project-preview" href="moody.html">
-            <span>01</span>
-            <div>
-              <h2>Moody</h2>
-              <p>A Spotify feature concept exploring music as a wellbeing companion.</p>
-            </div>
-          </a>
+        <a class="project-preview" href="artology.html">
+          <span>02</span>
+          <div>
+            <h2>Artology</h2>
+            <p>An ecommerce experience for an online art store with design system foundations.</p>
+          </div>
+        </a>
 
-          <a class="project-preview" href="artology.html">
-            <span>02</span>
-            <div>
-              <h2>Artology</h2>
-              <p>An ecommerce experience for an online art store with design system foundations.</p>
-            </div>
-          </a>
-        </section>
+        <article class="project-preview">
+          <span>03</span>
+          <div>
+            <h2>Complex systems</h2>
+            <p>A future case study about translating technical requirements into structured flows and scalable product patterns.</p>
+          </div>
+        </article>
       </section>
+
     </main>
+
+    <footer class="site-footer" aria-label="Contact links">
+      <div class="footer-copy">
+        <p class="footer-heading">Let's connect</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:brunacruz97@gmail.com?subject=Hello!">↗ Email</a>
+        <a href="https://www.linkedin.com/in/brunamcruz/" target="_blank" rel="noreferrer">↗ LinkedIn</a>
+        <a href="https://www.behance.net/brunacruz" target="_blank" rel="noreferrer">↗ Behance</a>
+      </div>
+    </footer>
   </body>
 </html>
