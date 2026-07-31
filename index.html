@@ -5,116 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Portfolio website for Bruna Marcela, a product designer creating thoughtful digital experiences."
+      content="Portfolio website for Bruna Marcela, a product designer focused on complex product ecosystems, structured flows, and scalable user experiences."
     >
     <title>Bruna Marcela | Product Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="logo" href="#home">BM</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#contact">Contact</a>
-        </div>
+      <a class="brand" href="index.html"><span class="brand-initial">B</span><span class="brand-rest"><span style="--i:0; --ri:13">r</span><span style="--i:1; --ri:12">u</span><span style="--i:2; --ri:11">n</span><span style="--i:3; --ri:10">a</span><span style="--i:4; --ri:9">&nbsp;</span><span style="--i:5; --ri:8">M</span><span style="--i:6; --ri:7">a</span><span style="--i:7; --ri:6">r</span><span style="--i:8; --ri:5">c</span><span style="--i:9; --ri:4">e</span><span style="--i:10; --ri:3">l</span><span style="--i:11; --ri:2">a</span><span style="--i:12; --ri:1">&nbsp;</span><span style="--i:13; --ri:0">꩜</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="/Bruna-Marcela-CV.pdf" target="_blank" rel="noreferrer">↗ Resume</a>
       </nav>
     </header>
 
-    <main id="home">
-      <section class="hero section">
-        <div class="hero-copy">
-          <p class="eyebrow">Product Designer</p>
-          <h1>Designing clear, human-centered digital experiences.</h1>
+    <main>
+      <section class="home-hero">
+        <div class="hero-statement">
+          <p>Hi ꩜ I'm Bruna Marcela, a product designer.</p>
+          <p class="emphasis-line">I love to turn <span class="strike complexity-word">complexity</span> into <span class="clarity-word">clarity.</span></p>
           <p>
-            I'm Bruna Marcela, a product designer focused on thoughtful
-            interfaces, design systems, and experiences that make people's lives
-            easier.
+            I design intuitive digital products that balance user needs, business goals,<br>
+            and technical feasibility.
           </p>
-          <div class="actions">
-            <a class="button primary" href="#work">View Work</a>
-            <a class="button secondary" href="#contact">Get in Touch</a>
-          </div>
         </div>
-
-        <aside class="profile-card" aria-label="Portfolio focus">
-          <span>Currently</span>
-          <strong>Building meaningful products with clarity and care.</strong>
-          <p>UX strategy, interface design, prototyping, and design systems.</p>
-        </aside>
+        <div class="hero-meta" aria-label="Location and site credit">
+          <span>Portugal</span>
+          <span>Designed and vibecoded by me</span>
+        </div>
       </section>
 
-      <section id="about" class="section about-section">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>A designer who enjoys turning ideas into useful experiences.</h2>
+      <section id="work" class="work-section">
+        <div class="selected-work-title" data-work-title>
+          <p class="eyebrow">Selected work</p>
+          <p class="work-context" data-work-context>A Spotify feature concept exploring music as a wellbeing companion.</p>
         </div>
-        <p>
-          I care about understanding people, shaping product direction, and
-          designing interfaces that feel simple without losing depth. My work
-          blends research, visual design, and systems thinking.
-        </p>
-      </section>
+        <div class="selected-work-spacer" aria-hidden="true"></div>
 
-      <section id="work" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Case studies and concepts</h2>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-card">
+        <section class="featured-projects" aria-label="Featured projects">
+          <a
+            class="project-preview"
+            href="moody.html"
+            data-context="A Spotify feature concept exploring music as a wellbeing companion."
+          >
             <span>01</span>
-            <h3>Moody</h3>
-            <p>
-              A Spotify feature concept exploring how music can support
-              wellbeing and mood awareness.
-            </p>
-          </article>
+            <div>
+              <h2>Moody</h2>
+              <p>A Spotify feature concept exploring music as a wellbeing companion.</p>
+            </div>
+          </a>
 
-          <article class="work-card">
+          <a
+            class="project-preview"
+            href="artology.html"
+            data-context="An ecommerce experience for an online art store with design system foundations."
+          >
             <span>02</span>
-            <h3>Artology</h3>
-            <p>
-              An e-commerce experience for an online art store, focused on
-              interface design and design system foundations.
-            </p>
-          </article>
+            <div>
+              <h2>Artology</h2>
+              <p>An ecommerce experience for an online art store with design system foundations.</p>
+            </div>
+          </a>
 
-          <article class="work-card">
+          <article
+            class="project-preview"
+            data-context="A future case study about translating technical requirements into scalable product patterns."
+          >
             <span>03</span>
-            <h3>Design Systems</h3>
-            <p>
-              Reusable patterns, components, and visual decisions that help
-              products scale with consistency.
-            </p>
+            <div>
+              <h2>Complex systems</h2>
+              <p>A future case study about translating technical requirements into structured flows and scalable product patterns.</p>
+            </div>
           </article>
-        </div>
+        </section>
       </section>
 
-      <section id="contact" class="section contact-section">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's create something thoughtful.</h2>
-        <p>
-          Reach out for projects, collaborations, or design opportunities.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:brunacruz97@gmail.com?subject=Hello!">Email</a>
-          <a href="https://www.behance.net/brunacruz" target="_blank" rel="noreferrer">Behance</a>
-          <a href="https://www.linkedin.com/in/brunamcruz/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </section>
     </main>
 
-    <footer class="site-footer">
-      <p>&copy; 2026 Bruna Marcela Cruz. All rights reserved.</p>
+    <footer class="site-footer" aria-label="Contact links">
+      <div class="footer-copy">
+        <p class="footer-heading">Let's connect</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:brunacruz97@gmail.com?subject=Hello!">↗ Email</a>
+        <a href="https://www.linkedin.com/in/brunamcruz/" target="_blank" rel="noreferrer">↗ LinkedIn</a>
+        <a href="https://www.behance.net/brunacruz" target="_blank" rel="noreferrer">↗ Behance</a>
+      </div>
     </footer>
+    <script>
+      const workContext = document.querySelector("[data-work-context]");
+      const workTitle = document.querySelector("[data-work-title]");
+      const workSection = document.querySelector(".work-section");
+      const workSpacer = document.querySelector(".selected-work-spacer");
+      const projectPanels = [...document.querySelectorAll(".project-preview[data-context]")];
+
+      function updateWorkContext() {
+        if (!workContext || projectPanels.length === 0) return;
+
+        const viewportCenter = window.innerHeight / 2;
+        const activeProject = projectPanels
+          .filter((project) => {
+            const rect = project.getBoundingClientRect();
+            return rect.bottom > 0 && rect.top < window.innerHeight;
+          })
+          .sort((a, b) => {
+            const rectA = a.getBoundingClientRect();
+            const rectB = b.getBoundingClientRect();
+            const centerA = rectA.top + rectA.height / 2;
+            const centerB = rectB.top + rectB.height / 2;
+            return Math.abs(centerA - viewportCenter) - Math.abs(centerB - viewportCenter);
+          })[0];
+
+        if (activeProject) {
+          workContext.textContent = activeProject.dataset.context;
+        }
+      }
+
+      function updateWorkTitle() {
+        if (!workTitle || !workSection) return;
+
+        const headerOffset = 48;
+        const workTop = workSection.getBoundingClientRect().top;
+        const scrollDistance = Math.max(
+          workTitle.offsetHeight + (workSpacer?.offsetHeight || 0),
+          1
+        );
+        const progress = Math.min(Math.max((headerOffset - workTop) / scrollDistance, 0), 1);
+
+        const titleSize = 40 - (24.8 * progress);
+        const centerOffset = Math.max(((window.innerHeight - headerOffset) / 2) - 38, 0);
+        const titleOffset = centerOffset * (1 - progress);
+        const shouldCompact = progress >= 1;
+
+        workTitle.style.setProperty("--work-title-size", `${titleSize}px`);
+        workTitle.style.setProperty("--work-title-offset", `${titleOffset}px`);
+        workTitle.classList.toggle("is-compact", shouldCompact);
+      }
+
+      function updateWorkSection() {
+        updateWorkContext();
+        updateWorkTitle();
+      }
+
+      updateWorkSection();
+      window.addEventListener("scroll", updateWorkSection, { passive: true });
+      window.addEventListener("resize", updateWorkSection);
+    </script>
   </body>
 </html>
