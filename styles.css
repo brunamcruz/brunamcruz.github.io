@@ -12,7 +12,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -364,6 +364,10 @@ h3 {
   padding: clamp(64px, 9vw, 112px) 0;
 }
 
+.page-compact-top {
+  padding-top: 24px;
+}
+
 .page-hero {
   max-width: 900px;
   margin-bottom: clamp(52px, 7vw, 90px);
@@ -444,9 +448,107 @@ h3 {
   padding: clamp(64px, 10vw, 120px) 0 clamp(40px, 6vw, 72px);
 }
 
+.case-hero-compact {
+  padding-top: 0;
+  padding-bottom: 32px;
+}
+
+.case-hero-compact .eyebrow {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .case-hero p:last-child {
   max-width: 620px;
   font-size: 1.1rem;
+}
+
+.case-title-compact {
+  max-width: 760px;
+  font-size: 32px;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.case-overview {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1.2fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.case-overview-title {
+  max-width: 420px;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.case-overview-heading {
+  display: grid;
+  gap: 8px;
+}
+
+.case-overview-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.case-overview-content {
+  padding-top: 26px;
+  display: grid;
+  gap: 34px;
+}
+
+.case-overview-lede {
+  max-width: none;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.case-hero .case-overview-lede {
+  color: #111111;
+}
+
+.case-overview-lede + .case-overview-lede {
+  margin-top: -22px;
+}
+
+.case-overview-meta {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.case-overview-meta div,
+.case-overview-meta dd {
+  margin: 0;
+}
+
+.case-overview-meta dt {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.case-overview-meta dd {
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.35;
 }
 
 .case-layout {
@@ -469,11 +571,75 @@ h3 {
   margin: 8px 0 0;
 }
 
+.case-layout-top-meta {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.case-layout-top-meta .case-meta {
+  border-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.case-layout-top-meta .case-meta div {
+  padding: 0;
+  border-bottom: 0;
+}
+
 .case-copy {
   min-height: 320px;
   padding: clamp(28px, 5vw, 52px);
   border: 1px solid var(--line);
   background: var(--soft);
+}
+
+.case-copy-open {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.case-copy-open .case-study-section h2 {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.case-copy-open .case-study-section {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1.2fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.case-study-section + .case-study-section {
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.case-copy-open .case-study-section + .case-study-section {
+  border-top: 0;
+}
+
+.case-banner-placeholder {
+  min-height: clamp(240px, 34vw, 420px);
+  margin: 42px 0;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(49, 87, 213, 0.08), transparent),
+    var(--soft);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .site-footer {
@@ -564,6 +730,7 @@ h3 {
   .home-hero,
   .home-grid,
   .content-grid,
+  .case-overview,
   .project-row,
   .case-layout {
     grid-template-columns: 1fr;
@@ -622,6 +789,23 @@ h3 {
 
   .hero-statement br {
     display: none;
+  }
+
+  .case-layout-top-meta .case-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .case-overview-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .case-overview-content {
+    padding-top: 0;
+  }
+
+  .case-copy-open .case-study-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .about-preview {
