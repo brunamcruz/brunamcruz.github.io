@@ -246,7 +246,7 @@ h3 {
   position: sticky;
   top: 48px;
   z-index: 8;
-  padding: 18px 0 20px;
+  padding: 10px 0 20px;
   background: var(--background);
   display: flex;
   flex-direction: column;
@@ -294,8 +294,8 @@ h3 {
 }
 
 .selected-work-title.has-work-context {
-  padding-bottom: 32px;
-  box-shadow: 0 12px 0 var(--background);
+  padding-bottom: 16px;
+  box-shadow: 0 4px 0 var(--background);
 }
 
 .selected-work-title.is-compact .work-context {
@@ -777,10 +777,10 @@ h3 {
 }
 
 .case-principles h4 {
-  margin: 0 0 8px;
+  margin: 0 0 3px;
   color: var(--ink);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.35;
 }
 
@@ -791,20 +791,20 @@ h3 {
 }
 
 .case-timeline {
-  margin-top: 24px;
+  margin-top: 16px;
   display: grid;
   gap: 0;
 }
 
 .case-timeline article {
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .case-timeline h4,
 .case-callout h4 {
   margin: 0 0 6px;
   color: var(--ink);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.35;
 }
@@ -815,8 +815,13 @@ h3 {
   color: #111111;
 }
 
+.case-timeline h4 {
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+
 .case-callout {
-  margin-top: 28px;
+  margin-top: 18px;
   padding: 0;
   background: transparent;
   color: var(--muted);
@@ -833,6 +838,58 @@ h3 {
   font-size: 0.82rem;
 }
 
+.feature-contribution {
+  display: grid;
+  gap: 28px;
+}
+
+.feature-contribution header h3 {
+  margin: 0 0 3px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.feature-contribution header p,
+.feature-contribution section p {
+  margin: 0;
+  color: #111111;
+}
+
+.feature-contribution section {
+  display: grid;
+  gap: 10px;
+}
+
+.feature-contribution h4 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.feature-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feature-chip-list span {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #111111;
+  font-size: 0.86rem;
+  line-height: 1.2;
+}
+
+.feature-chip-list-outcome span {
+  background: var(--soft);
+}
+
 .case-copy-open .case-study-section {
   display: grid;
   grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1.2fr);
@@ -847,6 +904,8 @@ h3 {
 }
 
 .case-copy-open .case-study-section + .case-study-section {
+  margin-top: 28px;
+  padding-top: 0;
   border-top: 0;
 }
 
@@ -865,7 +924,7 @@ h3 {
 }
 
 .case-banner {
-  margin: 42px 0;
+  margin: 28px 0;
 }
 
 .case-banner img {
