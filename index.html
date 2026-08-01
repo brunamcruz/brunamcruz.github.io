@@ -91,14 +91,25 @@
             </div>
           </a>
 
-          <article
-            class="project-preview"
-            data-context="A future case study about translating technical requirements into scalable product patterns."
+          <a
+            id="moody"
+            class="project-preview has-image"
+            href="moody.html"
+            data-context="Postgrad | Identifying an opportunity within an existing app and designing a new feature around it."
           >
             <div>
-              <h2>Complex systems</h2>
+              <img
+                class="project-logo project-logo-moody"
+                src="moody.svg"
+                alt="Moody"
+              >
+              <img
+                class="project-preview-image"
+                src="moody.png"
+                alt="Moody product concept preview."
+              >
             </div>
-          </article>
+          </a>
         </section>
       </section>
 
@@ -119,6 +130,8 @@
       const workTitle = document.querySelector("[data-work-title]");
       const workSection = document.querySelector(".work-section");
       const workSpacer = document.querySelector(".selected-work-spacer");
+      const homeNavLink = document.querySelector('.main-nav a[href="index.html"]');
+      const workNavLink = document.querySelector('.main-nav a[href="#work"]');
       const projectPanels = [...document.querySelectorAll(".project-preview[data-context]")];
 
       function updateWorkContext() {
@@ -167,9 +180,25 @@
         workTitle.classList.toggle("is-compact", shouldCompact);
       }
 
+      function updateActiveNav() {
+        if (!workSection || !homeNavLink || !workNavLink) return;
+
+        const rect = workSection.getBoundingClientRect();
+        const isWorkActive = rect.top <= window.innerHeight * 0.35 && rect.bottom > 80;
+
+        if (isWorkActive) {
+          homeNavLink.removeAttribute("aria-current");
+          workNavLink.setAttribute("aria-current", "page");
+        } else {
+          homeNavLink.setAttribute("aria-current", "page");
+          workNavLink.removeAttribute("aria-current");
+        }
+      }
+
       function updateWorkSection() {
         updateWorkContext();
         updateWorkTitle();
+        updateActiveNav();
       }
 
       updateWorkSection();
