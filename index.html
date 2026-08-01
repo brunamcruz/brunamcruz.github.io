@@ -46,33 +46,48 @@
       <section id="work" class="work-section">
         <div class="selected-work-title" data-work-title>
           <p class="eyebrow">Selected work</p>
-          <p class="work-context" data-work-context>Nokia - Product design, 2024-2026</p>
+          <p class="work-context" data-work-context>Nokia | Product Design | Complex systems, B2B SaaS, Workflow design, Automation</p>
         </div>
         <div class="selected-work-spacer" aria-hidden="true"></div>
 
         <section class="featured-projects" aria-label="Featured projects">
           <a
             id="nokia"
-            class="project-preview"
+            class="project-preview has-image"
             href="nokia.html"
-            data-context="Nokia - Product design, 2024-2026"
+            data-context="Nokia | Product Design | Complex systems, B2B SaaS, Workflow design, Automation"
           >
-            <span>01</span>
             <div>
-              <h2>Nokia</h2>
-              <p>Nokia - Product design, 2024-2026</p>
+              <img
+                class="project-logo"
+                src="https://www.nokia.com/themes/custom/onenokia_reskin/logo.svg"
+                alt="Nokia"
+              >
+              <img
+                class="project-preview-image"
+                src="nokia-banner.png?v=2"
+                alt="People working with technical dashboards in a network operations environment."
+              >
             </div>
           </a>
 
           <a
-            class="project-preview"
-            href="artology.html"
-            data-context="An ecommerce experience for an online art store with design system foundations."
+            id="unleash"
+            class="project-preview has-image"
+            href="unleash.html"
+            data-context="Postgrad | MVP | From identifying a need to developing a proposal for its resolution."
           >
-            <span>02</span>
             <div>
-              <h2>Artology</h2>
-              <p>An ecommerce experience for an online art store with design system foundations.</p>
+              <img
+                class="project-logo project-logo-unleash"
+                src="unleash.svg"
+                alt="Unleash"
+              >
+              <img
+                class="project-preview-image"
+                src="unleash.png"
+                alt="Unleash product interface preview."
+              >
             </div>
           </a>
 
@@ -80,10 +95,8 @@
             class="project-preview"
             data-context="A future case study about translating technical requirements into scalable product patterns."
           >
-            <span>03</span>
             <div>
               <h2>Complex systems</h2>
-              <p>A future case study about translating technical requirements into structured flows and scalable product patterns.</p>
             </div>
           </article>
         </section>
@@ -144,10 +157,13 @@
         const titleSize = 40 - (24.8 * progress);
         const centerOffset = Math.max(((window.innerHeight - headerOffset) / 2) - 38, 0);
         const titleOffset = centerOffset * (1 - progress);
-        const shouldCompact = progress >= 1;
+        const firstProjectTop = projectPanels[0]?.getBoundingClientRect().top ?? Infinity;
+        const shouldShowContext = firstProjectTop <= window.innerHeight * 0.82;
+        const shouldCompact = progress >= 0.98;
 
         workTitle.style.setProperty("--work-title-size", `${titleSize}px`);
         workTitle.style.setProperty("--work-title-offset", `${titleOffset}px`);
+        workTitle.classList.toggle("has-work-context", shouldShowContext);
         workTitle.classList.toggle("is-compact", shouldCompact);
       }
 
