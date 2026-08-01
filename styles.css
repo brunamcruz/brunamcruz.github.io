@@ -401,6 +401,7 @@ h3 {
   position: relative;
   min-height: clamp(320px, 72vh, 720px);
   isolation: isolate;
+  overflow: hidden;
 }
 
 .project-preview.has-image .project-preview-image {
@@ -410,6 +411,13 @@ h3 {
   height: 100%;
   aspect-ratio: auto;
   z-index: 0;
+  transform: scale(1.035);
+  transition: transform 520ms ease;
+}
+
+.project-preview.has-image:hover .project-preview-image,
+.project-preview.has-image:focus-visible .project-preview-image {
+  transform: scale(1);
 }
 
 .project-preview.has-image {
@@ -431,6 +439,8 @@ h3 {
   height: auto;
   top: clamp(24px, 4vw, 48px);
   filter: brightness(0) invert(1);
+  transform-origin: left center;
+  transition: transform 220ms ease;
 }
 
 .project-preview.has-image .project-logo-unleash {
@@ -439,6 +449,11 @@ h3 {
 
 .project-preview.has-image .project-logo-moody {
   width: clamp(150px, 18vw, 230px);
+}
+
+.project-preview.has-image:hover .project-logo,
+.project-preview.has-image:focus-visible .project-logo {
+  transform: scale(1.045);
 }
 
 #unleash.project-preview.has-image .project-logo {
