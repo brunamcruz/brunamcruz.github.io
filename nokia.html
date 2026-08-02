@@ -168,71 +168,156 @@
 
           <section class="case-study-section">
             <h2>Selected Contributions</h2>
-            <div class="feature-contribution">
-              <header>
-                <h3>Health Checks</h3>
-                <p>Allowing users to customise health checks at the moment of execution</p>
-              </header>
+            <div class="feature-contribution-list">
+              <div class="feature-contribution">
+                <header>
+                  <h3>Health Checks</h3>
+                  <p>Allowing users to customise health checks at the moment of execution</p>
+                </header>
 
-              <section>
-                <h4>Problem</h4>
-                <p>
-                  Health checks were already configurable through a longer setup
-                  flow. When users wanted to run a health check directly, the
-                  existing modal was too limited. The challenge was to allow
-                  quick, temporary adjustments without entering a complete
-                  lifecycle draft operation workflow.
-                </p>
-              </section>
+                <section>
+                  <h4>Problem</h4>
+                  <p>
+                    Health checks were already configurable through a longer setup
+                    flow. When users wanted to run a health check directly, the
+                    existing modal was too limited. The challenge was to allow
+                    quick, temporary adjustments without entering a complete
+                    lifecycle draft operation workflow.
+                  </p>
+                </section>
 
-              <section>
-                <h4>Visual evidence</h4>
-                <div class="feature-visuals" aria-label="Health Checks visuals">
-                  <img
-                    src="frameworks-healthchecks.png"
-                    alt="Health Checks action points and user stories."
-                  >
-                  <img
-                    src="diagram-hc.png"
-                    alt="Health Checks temporary and update flow diagram."
-                  >
-                </div>
-              </section>
+                <section>
+                  <h4>Visual evidence</h4>
+                  <div class="feature-visuals" aria-label="Health Checks visuals">
+                    <img
+                      src="frameworks-healthchecks.png"
+                      alt="Health Checks action points and user stories."
+                    >
+                    <img
+                      src="diagram-hc.png"
+                      alt="Health Checks temporary and update flow diagram."
+                    >
+                  </div>
+                </section>
 
-              <section>
-                <h4>My contribution</h4>
-                <ul class="case-bullet-list">
-                  <li>→ Clarified open requirements with architects and stakeholders.</li>
-                  <li>→ Mapped temporary vs permanent customisation flows.</li>
-                  <li>→ Designed the operation health check experience and validated it through iterations.</li>
-                </ul>
-              </section>
+                <section>
+                  <h4>My contribution</h4>
+                  <ul class="case-bullet-list">
+                    <li>→ Clarified open requirements with architects and stakeholders.</li>
+                    <li>→ Mapped temporary vs permanent customisation flows.</li>
+                    <li>→ Designed the operation health check experience and validated it through iterations.</li>
+                  </ul>
+                </section>
 
-              <section>
-                <h4>Outcome</h4>
-                <div class="feature-chip-list feature-chip-list-outcome" aria-label="Health Checks outcome">
-                  <span>More flexibility during execution</span>
-                  <span>Permanent configuration kept in the right workflow</span>
-                </div>
-              </section>
+                <section>
+                  <h4>Outcome</h4>
+                  <div class="feature-chip-list" aria-label="Health Checks outcome">
+                    <span>Faster execution</span>
+                    <span>Lower complexity</span>
+                    <span>Scalable solution</span>
+                  </div>
+                </section>
+              </div>
+
+              <div class="feature-contribution">
+                <header>
+                  <h3>Network Function states</h3>
+                  <p>Mapping Network Function states into clear behaviours and actions</p>
+                </header>
+                <section>
+                  <h4>Problem</h4>
+                  <p>
+                    Network Functions could move through multiple states, each
+                    affecting what users could see, do and understand in the
+                    interface. The challenge was to translate this complex state
+                    logic into a consistent experience across status indicators,
+                    action menus, overview sections and detail panels.
+                  </p>
+                </section>
+                <section>
+                  <h4>Visual evidence</h4>
+                  <div class="feature-evidence">
+                    <p class="feature-evidence-title">Early questions helped clarify state transitions, expected behaviours and edge cases.</p>
+                    <div class="feature-visuals feature-visuals-two" aria-label="Network Function states open questions">
+                      <img
+                        src="Questions.png"
+                        alt="Initial requirements and open questions for Network Function states."
+                      >
+                      <img
+                        src="Questions%20II.png"
+                        alt="Additional open questions for Network Function states."
+                      >
+                    </div>
+                    <p class="feature-evidence-title">I structured the state logic into a framework covering behaviours, available actions, disabled options and interface feedback. This matrix became a shared framework used across teams, helping align UX, product and engineering decisions across Network Function states.</p>
+                    <div class="feature-visuals" aria-label="Network Function states framework">
+                      <img
+                        src="statuses.png?v=2"
+                        alt="Network Function states framework."
+                      >
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <h4>My contribution</h4>
+                  <ul class="case-bullet-list">
+                    <li>→ Collaborated with architects and stakeholders to clarify how each Network Function state should behave.</li>
+                    <li>→ Mapped state-specific actions, disabled options, status labels and system feedback.</li>
+                    <li>→ Created a shared state matrix to align design decisions and support implementation.</li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Outcome</h4>
+                  <div class="feature-chip-list" aria-label="Network Function states outcome">
+                    <span>Clear state behaviour</span>
+                    <span>Consistent actions & feedback</span>
+                    <span>Shared implementation reference</span>
+                  </div>
+                </section>
+              </div>
             </div>
           </section>
 
           <section class="case-study-section">
             <h2>Impact</h2>
-            <p>
-              The measurable or qualitative impact of the work, such as clearer
-              workflows, improved usability, stronger product alignment, or
-              better scalability.
-            </p>
+            <div class="case-section-content">
+              <p>
+                The product is still under development, so quantitative metrics
+                are not available yet. However, the work already contributed to
+                clearer product direction, stronger implementation foundations
+                and more efficient team collaboration.
+              </p>
+              <ul class="case-bullet-list">
+                <li>→ Reduced ambiguity around complex technical workflows</li>
+                <li>→ Improved cross-functional alignment before implementation</li>
+                <li>→ Created reusable frameworks for states, actions and behaviours</li>
+                <li>→ Strengthened design consistency and implementation quality</li>
+                <li>→ Supported faster exploration through AI-assisted workflows</li>
+              </ul>
+            </div>
           </section>
 
           <section class="case-study-section">
             <h2>Learnings</h2>
-            <p>
-              Reflections on what the project taught about designing for complex
-              systems, balancing constraints, and creating clarity at scale.
-            </p>
+            <div class="case-section-content">
+              <p>
+                This project reinforced that in complex technical products, the
+                value of design often goes beyond the final interface. The most
+                important contribution was creating structure across teams:
+                clarifying hidden system logic, mapping edge cases and helping
+                UX, product, architecture and engineering align around shared
+                decisions.
+              </p>
+              <p>
+                It showed me that strong design work can create direction before
+                final screens, reducing ambiguity and making complex workflows
+                easier for teams to reason about, validate and implement.
+              </p>
+              <p>
+                AI also supported this process by accelerating synthesis,
+                exploration and prototyping, while the final direction remained
+                grounded in collaboration, validation and product understanding.
+              </p>
+            </div>
           </section>
         </div>
       </section>
@@ -240,7 +325,7 @@
 
     <footer class="site-footer" aria-label="Contact links">
       <div class="footer-copy">
-        <p class="footer-heading">Let's connect</p>
+        <p class="footer-heading">Thank you! Let's connect</p>
       </div>
       <div class="footer-links">
         <a href="mailto:brunacruz97@gmail.com?subject=Hello!">↗ Email</a>
