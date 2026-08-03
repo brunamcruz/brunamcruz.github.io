@@ -545,7 +545,7 @@ h3 {
 .home-about-grid {
   display: grid;
   grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1.2fr);
-  gap: 32px;
+  gap: 24px 32px;
   align-items: start;
 }
 
@@ -589,6 +589,11 @@ h3 {
   color: var(--muted);
   font-size: 0.86rem;
   line-height: 1.45;
+}
+
+.home-about h2 + .home-about-caption {
+  max-width: none;
+  margin-top: 20px;
 }
 
 .home-about-content {
