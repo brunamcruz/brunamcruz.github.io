@@ -492,8 +492,6 @@ h3 {
 }
 
 .home-about {
-  width: calc(100% - 48px);
-  max-width: none;
   scroll-margin-top: 72px;
   position: relative;
   padding: 0 0 clamp(80px, 10vw, 130px);
