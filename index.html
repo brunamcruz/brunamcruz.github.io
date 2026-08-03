@@ -22,7 +22,7 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="#work">Work</a>
-        <a href="about.html">About</a>
+        <a href="#about">About</a>
         <a href="/Bruna-Marcela-CV.pdf" target="_blank" rel="noreferrer">↗ Resume</a>
       </nav>
     </header>
@@ -113,6 +113,61 @@
         </section>
       </section>
 
+      <section id="about" class="home-about" aria-labelledby="about-title">
+        <div class="about-section-title" data-about-title>
+          <p class="eyebrow">About me</p>
+        </div>
+        <div class="about-section-spacer" aria-hidden="true"></div>
+
+        <div class="home-about-grid">
+          <div>
+            <h2 id="about-title">My design brain is usually somewhere between structure, details, and <em>"wait, why does this flow work like this?"</em></h2>
+          </div>
+          <figure class="home-about-banner">
+            <img
+              src="about-photo.jpg"
+              alt="Bruna standing in front of a blue mural character."
+            >
+          </figure>
+          <div class="home-about-content">
+            <div class="home-about-copy">
+              <p>
+                I’m Bruna Marcela, a product designer based in Portugal. I like
+                untangling complex things, making sense of messy flows, and
+                finding the small interaction details that make a product feel
+                easier to use.
+              </p>
+              <p>
+                Most of my work sits somewhere between systems thinking, UX
+                structure and visual care. I’m currently designing complex B2B
+                products at Nokia, where clarity is not just nice to have, it’s
+                part of making the product usable.
+              </p>
+            </div>
+
+            <div class="home-about-meta" aria-label="Profile details">
+              <div>
+                <span>Experience</span>
+                <p>Product Designer<br>Nokia<br>Jan 2024 - now</p>
+                <p>Primary School Teacher<br>Escola Primária Alice Vieira, Lisboa<br>2022 - 2023</p>
+                <p>Graphic Designer<br>MinhoBrinde<br>2021 - 2022</p>
+              </div>
+              <div>
+                <span>Education</span>
+                <p>Postgrad in Digital Experience Design<br>Faculty of Fine Arts Lisbon<br>2022 - 2023</p>
+                <p>Bachelor in Communication Design<br>Faculty of Fine Arts Lisbon<br>2017 - 2020</p>
+              </div>
+            </div>
+          </div>
+          <p class="home-about-caption">
+            In my group of friends, I'm known as the bridge, because I connect, I
+            introduce, I present people to each other. I love craft beer and
+            music festivals. I can't decide between techno and rock, so I'm a
+            lover of both. I love to travel and analog photography.
+          </p>
+        </div>
+      </section>
+
     </main>
 
     <footer class="site-footer" aria-label="Contact links">
@@ -129,9 +184,13 @@
       const workContext = document.querySelector("[data-work-context]");
       const workTitle = document.querySelector("[data-work-title]");
       const workSection = document.querySelector(".work-section");
+      const aboutSection = document.querySelector("#about");
+      const aboutTitle = document.querySelector("[data-about-title]");
+      const aboutSpacer = document.querySelector(".about-section-spacer");
       const workSpacer = document.querySelector(".selected-work-spacer");
       const homeNavLink = document.querySelector('.main-nav a[href="index.html"]');
       const workNavLink = document.querySelector('.main-nav a[href="#work"]');
+      const aboutNavLink = document.querySelector('.main-nav a[href="#about"]');
       const projectPanels = [...document.querySelectorAll(".project-preview[data-context]")];
 
       function updateWorkContext() {
@@ -180,24 +239,54 @@
         workTitle.classList.toggle("is-compact", shouldCompact);
       }
 
+      function updateAboutTitle() {
+        if (!aboutTitle || !aboutSection) return;
+
+        const headerOffset = 48;
+        const aboutTop = aboutSection.getBoundingClientRect().top;
+        const scrollDistance = Math.max(
+          aboutTitle.offsetHeight + (aboutSpacer?.offsetHeight || 0),
+          1
+        );
+        const progress = Math.min(Math.max((headerOffset - aboutTop) / scrollDistance, 0), 1);
+
+        const titleSize = 40 - (24.8 * progress);
+        const centerOffset = Math.max(((window.innerHeight - headerOffset) / 2) - 38, 0);
+        const titleOffset = centerOffset * (1 - progress);
+        const shouldCompact = progress >= 0.98;
+
+        aboutTitle.style.setProperty("--about-title-size", `${titleSize}px`);
+        aboutTitle.style.setProperty("--about-title-offset", `${titleOffset}px`);
+        aboutTitle.classList.toggle("is-compact", shouldCompact);
+      }
+
       function updateActiveNav() {
-        if (!workSection || !homeNavLink || !workNavLink) return;
+        if (!workSection || !homeNavLink || !workNavLink || !aboutNavLink) return;
 
         const rect = workSection.getBoundingClientRect();
         const isWorkActive = rect.top <= window.innerHeight * 0.35 && rect.bottom > 80;
+        const aboutRect = aboutSection?.getBoundingClientRect();
+        const isAboutActive = aboutRect && aboutRect.top <= window.innerHeight * 0.45 && aboutRect.bottom > 80;
 
-        if (isWorkActive) {
+        if (isAboutActive) {
+          homeNavLink.removeAttribute("aria-current");
+          workNavLink.removeAttribute("aria-current");
+          aboutNavLink.setAttribute("aria-current", "page");
+        } else if (isWorkActive) {
           homeNavLink.removeAttribute("aria-current");
           workNavLink.setAttribute("aria-current", "page");
+          aboutNavLink.removeAttribute("aria-current");
         } else {
           homeNavLink.setAttribute("aria-current", "page");
           workNavLink.removeAttribute("aria-current");
+          aboutNavLink.removeAttribute("aria-current");
         }
       }
 
       function updateWorkSection() {
         updateWorkContext();
         updateWorkTitle();
+        updateAboutTitle();
         updateActiveNav();
       }
 
