@@ -333,6 +333,14 @@ h3 {
   font-weight: 700;
 }
 
+.case-text-link {
+  border-bottom: 1px solid currentColor;
+}
+
+.case-text-link:hover {
+  color: var(--accent);
+}
+
 .section-title {
   min-height: 72px;
   margin-bottom: 0;
