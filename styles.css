@@ -1627,6 +1627,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .case-copy-open .case-study-section-design > h2,
+  .case-copy-open .case-study-section-design .feature-contribution-list {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .case-study-section-design .feature-contribution > *,
   .case-study-section-design .feature-contribution .full-width-visual-section {
     grid-column: 1;
@@ -1664,6 +1670,11 @@ h3 {
 
   .define-finding-pillars {
     grid-template-columns: 1fr;
+  }
+
+  .pillar-chip-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .product-vision-layout {
